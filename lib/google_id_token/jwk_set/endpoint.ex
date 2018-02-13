@@ -16,7 +16,7 @@ defmodule GoogleIDToken.JWKSet.Endpoint do
   @doc """
   Get the keys from the endpoint over the network.
   """
-  @spec get(t) :: {:ok, JWKSet.t, map} | {:error, term}
+  @spec get(t) :: {:ok, JWKSet.t(), map} | {:error, term}
   def get(%__MODULE__{} = endpoint) do
     url = URI.to_string(endpoint.uri)
 
